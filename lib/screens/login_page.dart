@@ -99,13 +99,17 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/school_logo.jpg',
-                      height: 100,
-                      errorBuilder: (context, error, stackTrace) => const Icon(
-                        Icons.school,
-                        size: 90,
-                        color: cctGreen,
+                ClipOval(
+                child: Image.asset(
+                'assets/school_logo.jpg',
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) => const Icon(
+                    Icons.school,
+                    size: 90,
+                    color: cctGreen,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 16),
